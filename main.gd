@@ -26,14 +26,10 @@ enum Contents
 	MERCHANT = 256,
 	CAMP = 512,
 	BOSS = 1024,
-	RANDOM = 2048,
-	ANOTHER = 4096,
-	ANOTHER2 = 8192,
-	ANOTHER3 = 16384,
-	ANOTHER4 = 32768
+	RANDOM = 2048
 }
 
-const BOTTOM_LEFT_CORNER: Vector2 = Vector2(320, 640)
+const BOTTOM_LEFT_CORNER: Vector2 = Vector2(320, 896)
 const ROOM_SIZE: Vector2 = Vector2(160, 160)
 
 @export var _dimensions: Vector2i = Vector2i(7, 5)
@@ -133,7 +129,7 @@ func _print_dungeon() -> void:
 			else:
 				dungeon_as_string += "   "
 		dungeon_as_string += '\n'
-	print(dungeon_as_string)
+	#print(dungeon_as_string)
 
 
 func _draw_dungeon() -> void:
@@ -149,5 +145,16 @@ func _draw_dungeon() -> void:
 						room.add_door(i)
 				for i in _room_icons.size():
 					if dungeon[x][y] & Contents.values()[i]:
-						room.set_icon(_room_icons[i])
+						var colors: Array = [
+							Color(1.0, 0.0, 0.0),    # Red / ENTRANCE
+							Color(0.0, 0.6, 1.0),    # Blue / STAIRS
+							Color(0.0, 0.8, 0.2),    # Green / ENEMY
+							Color(1.0, 0.5, 0.0),    # Orange / TREASURE
+							Color(0.6, 0.0, 1.0),    # Purple / MERCHANT
+							Color(1.0, 1.0, 0.0),    # Yellow / CAMP
+							Color(0.0, 0.9, 0.8),    # Cyan / BOSS
+							Color(1.0, 0.0, 1.0)     # Magenta / RANDOM
+						]
+						var color = colors[i-1]
+						room.set_icon(_room_icons[i], color)
 						break

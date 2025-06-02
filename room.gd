@@ -13,5 +13,6 @@ func clear_doors() -> void:
 		if not child.name.begins_with("F") and not child.name.begins_with("I"):
 			child.queue_free()
 
-func set_icon(icon: Texture2D) -> void:
-	$Icon.texture = icon
+func set_icon(icon: Texture2D, color) -> void:
+	self.texture = icon
+	self.modulate = color

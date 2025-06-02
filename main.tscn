@@ -1,21 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://bb0q56ubfshb"]
+[gd_scene load_steps=11 format=3 uid="uid://bb0q56ubfshb"]
 
 [ext_resource type="Script" uid="uid://nvsg8mdimg38" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cfgt0qf2mjq84" path="res://room.tscn" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://cop1hvvnknidk" path="res://assets/aquarius-sign-zodiac-astrology-26375.png" id="3_kek77"]
-[ext_resource type="Texture2D" uid="uid://dlro8kd0owfb8" path="res://assets/aries-sign-zodiac-astrology-26365.png" id="4_4c57u"]
-[ext_resource type="Texture2D" uid="uid://bsnfco5lhrnft" path="res://assets/cancer-sign-zodiac-astrology-26368.png" id="5_efxa6"]
-[ext_resource type="Texture2D" uid="uid://frrbhinrk8qx" path="res://assets/capricorn-sign-zodiac-astrology-26374.png" id="6_dg77c"]
-[ext_resource type="Texture2D" uid="uid://ewlil4omqepp" path="res://assets/gemini-sign-zodiac-astrology-26367.png" id="7_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://dujro288tbml5" path="res://assets/leo-sign-zodiac-astrology-26369.png" id="8_w48qg"]
-[ext_resource type="Texture2D" uid="uid://bk2r4dfs8ojfp" path="res://assets/libra-sign-zodiac-astrology-26371.png" id="9_vivmo"]
-[ext_resource type="Texture2D" uid="uid://bitrc2ls06jeu" path="res://assets/pisces-sign-zodiac-astrology-26376.png" id="10_4c57u"]
-[ext_resource type="Texture2D" uid="uid://cwwv107komxft" path="res://assets/sagittarius-sign-zodiac-astrology-26373.png" id="11_w48qg"]
-[ext_resource type="Texture2D" uid="uid://d2eh1nt7aopil" path="res://assets/scorpio-sign-zodiac-astrology-26372.png" id="12_vivmo"]
-[ext_resource type="Texture2D" uid="uid://2iqg18aa4ptm" path="res://assets/taurus-sign-zodiac-astrology-26366.png" id="13_2cqfq"]
-[ext_resource type="Texture2D" uid="uid://cge5vfe72m5sx" path="res://assets/virgo-sign-zodiac-astrology-26370.png" id="14_yaehf"]
+[ext_resource type="Texture2D" uid="uid://7ak71viq0bbw" path="res://assets/1.svg" id="3_4c57u"]
+[ext_resource type="Texture2D" uid="uid://b4m6wb16pl5u1" path="res://assets/2.svg" id="4_efxa6"]
+[ext_resource type="Texture2D" uid="uid://sncscha2wy18" path="res://assets/3.svg" id="5_dg77c"]
+[ext_resource type="Texture2D" uid="uid://dladwx3yxdimp" path="res://assets/4.svg" id="6_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://cb2ejcieoyi06" path="res://assets/5.svg" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://7qlexv2gwvd5" path="res://assets/6.svg" id="8_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dvrehvyam1pc7" path="res://assets/7.svg" id="9_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://dha4wv68wajs4" path="res://assets/8.svg" id="10_yaehf"]
 
 [node name="RandomDungeon" type="Node2D"]
 script = ExtResource("1_ig7tw")
+_dimensions = Vector2i(5, 7)
+_branches = Array[int]([0, 0])
 _room_scene = ExtResource("2_0xm2m")
-_room_icons = Array[Texture2D]([null, ExtResource("3_kek77"), ExtResource("4_4c57u"), ExtResource("5_efxa6"), ExtResource("6_dg77c"), ExtResource("7_ycdy4"), ExtResource("8_w48qg"), ExtResource("9_vivmo"), ExtResource("10_4c57u"), ExtResource("11_w48qg"), ExtResource("12_vivmo"), ExtResource("13_2cqfq"), ExtResource("14_yaehf")])
+_room_icons = Array[Texture2D]([null, ExtResource("3_4c57u"), ExtResource("4_efxa6"), ExtResource("5_dg77c"), ExtResource("6_ycdy4"), ExtResource("7_w48qg"), ExtResource("8_vivmo"), ExtResource("9_2cqfq"), ExtResource("10_yaehf")])
